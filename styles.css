@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'Alarm Clock';
+    src: url('alarm\ clock.ttf') format('truetype');
+}
+
+:root {
+    --background: rgb(232, 250, 255);
+    --calculator: #e6e2df;
+    --clear-btn: #b1c6d5;
+    --delete-btn: #d9bcbc;
+    --display: rgb(231, 231, 231);
+    --btn: #c5beb5;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background)
+}
+
+.btn {
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 8px;
+    background: var(--btn);
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.btn:hover {
+    filter: brightness(90%);
+}
+
+.btn:active {
+    filter: brightness(110%);
+}
+
+/* MAIN */
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.calculator {
+    width: 400px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 16px;
+    background: var(--calculator);
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 5px 10px 8px #888888;
+}
+
+#displayScreen {
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 3em;
+    text-align: right;
+    word-break: break-all;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: var(--display);
+    min-height: 99px;
+    font-family: 'Alarm Clock';
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px
+}
+
+#clearBtn,
+#deleteBtn {
+    grid-column: span 2;
+}
+
+#clearBtn {
+    background: var(--clear-btn);
+}
+
+#deleteBtn {
+    background: var(--delete-btn);
+}
+
+/* FOOTER */
+
+footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: black;
+color: white;
+text-align: center;
+}
