@@ -4,30 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
     <title>Calculator</title>
 </head>
 <body>
-    <!-- DISPLAY SCREEN -->
-    <div class="displayScreen">DISPLAY SCREEN</div> 
-    <!-- NUMERICAL DIGITS BUTTONS -->
-    <button class="digitBtns calcBtns" id="7Btn">7</button>
-    <button class="digitBtns calcBtns" id="8Btn">8</button>
-    <button class="digitBtns calcBtns" id="9Btn">9</button>
-    <button class="digitBtns calcBtns" id="4Btn">4</button>
-    <button class="digitBtns calcBtns" id="5Btn">5</button>
-    <button class="digitBtns calcBtns" id="6Btn">6</button>
-    <button class="digitBtns calcBtns" id="1Btn">1</button>
-    <button class="digitBtns calcBtns" id="2Btn">2</button>
-    <button class="digitBtns calcBtns" id="3Btn">3</button>
-    <button class="digitBtns calcBtns" id="0Btn">0</button>
-    <!-- OPERATION BUTTONS -->
-    <button class="opperationBtns calcBtns" id="addBtn">Add</button>
-    <button class="opperationBtns calcBtns" id="subtractBtn">Subtract</button>
-    <button class="opperationBtns calcBtns" id="multiplyBtn">Multiply</button>
-    <button class="opperationBtns calcBtns" id="divideBtn">Divide</button>
-    <button class="equalsBtn calcBtns" id="equalsBtn">Equals</button>
-    <button class="clearBtn calcBtns" id="clearBtn">Clear</button>
+    <main class="main">
+        <div class="calculator">
+            <!-- DISPLAY SCREEN -->
+            <div id="displayScreen">0</div>
+            <!-- Evaluate and clear buttons -->
+            <div class="buttons-grid">
+                <button class="btn" id="clearBtn">Clear</button>
+                <button class="btn" id="deleteBtn">Delete</button>
+                <!-- BUTTONS -->
+                <button class="btn" data-number>7</button>
+                <button class="btn" data-number>8</button>
+                <button class="btn" data-number>9</button>
+                <button class="btn" data-operator>/</button>
+                <button class="btn" data-number>4</button>
+                <button class="btn" data-number>5</button>
+                <button class="btn" data-number>6</button>
+                <button class="btn" data-operator>*</button>
+                <button class="btn" data-number>1</button>
+                <button class="btn" data-number>2</button>
+                <button class="btn" data-number>3</button>
+                <button class="btn" data-operator>-</button>
+                <button class="btn" data-number>0</button>
+                <button class="btn" id="pointBtn">.</button>
+                <button class="btn" id="equalsBtn">=</button>
+                <button class="btn" data-operator>+</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Copyright © <script>document.write(new Date().getFullYear())</script> Charles So
+    </footer>
 </body>
 <script src="javascript.js"></script>
 </html>
